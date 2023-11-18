@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install CUnit
+        run: |
+            sudo apt update
+            sudo apt install -y libcunit1-dev
+      - name: Run Test
+        run: make test

@@ -13,6 +13,7 @@ void vector_with_struct_test(void);
 void vector_2d_test(void);
 
 int main(void) {
+   int ret;
    CU_pSuite suite;
    CU_initialize_registry();
 
@@ -26,8 +27,9 @@ int main(void) {
    CU_add_test(suite, "Vector 2D Test", vector_2d_test);
 
    CU_basic_run_tests();
+   ret = CU_get_number_of_failures();
    CU_cleanup_registry();
-   return 0;
+   return ret;
 }
 
 void vector_new_test(void) {
