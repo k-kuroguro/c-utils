@@ -178,6 +178,6 @@ void vector_2d_test(void) {
    CU_ASSERT_EQUAL(vector_2d[1][1], 4);
    CU_ASSERT_EQUAL(vector_2d[1][2], 5);
 
-   vector_recursively_free(vector_2d, vector_free);
+   vector_free_each(vector_2d, vector_free);
    return;
 }

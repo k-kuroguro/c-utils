@@ -19,7 +19,7 @@ typedef struct vector_metadata_t {
          (vector)[i] = (value);                          \
       }                                                  \
    } while (0)
-#define vector_recursively_free(vector, free_func)       \
+#define vector_free_each(vector, free_func)              \
    do {                                                  \
       for (size_t i = 0; i < vector_size(vector); ++i) { \
          (free_func)((vector)[i]);                       \
