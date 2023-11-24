@@ -17,7 +17,7 @@ int main(void) {
    CU_pSuite suite;
    CU_initialize_registry();
 
-   suite = CU_add_suite("Vector Test", NULL, NULL);
+   suite = CU_add_suite("Vector Tests", NULL, NULL);
    CU_add_test(suite, "Vector New Test", vector_new_test);
    CU_add_test(suite, "Vector Push Back Test", vector_push_back_test);
    CU_add_test(suite, "Vector Iter Test", vector_iter_test);
